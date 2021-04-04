@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    API_KEY = "54640b5da3fd28953cbdc34af59edda9"
+    #API_KEY = insert API key
     value = requests.get("http://api.openweathermap.org/data/2.5/weather?q=Port%20Credit&appid=" + API_KEY)
     jsonified = value.json()
     temp = int(int(jsonified['main']['temp']) - 273.15)
